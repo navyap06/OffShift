@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Leave</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='apply.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Apply for Leave</h1>
+        <form action="{{ url_for('apply_leave') }}" method="POST">
+            <label for="employee_name">Employee Name:</label>
+            <input type="text" id="employee_name" name="employee_name" required>
+            
+            <label for="leave_type">Leave Type:</label>
+            <select id="leave_type" name="leave_type" required>
+                <option value="Sick Leave">Sick Leave</option>
+                <option value="Vacation Leave">Vacation Leave</option>
+                <option value="Casual Leave">Casual Leave</option>
+            </select>
+            
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date" required>
+            
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date" required>
+            
+            <button type="submit">Submit Request</button>
+        </form>
+        <a href="{{ url_for('leave1') }}" class="btn">Back to Leave Requests</a>
+    </div>
+</body>
+</html>

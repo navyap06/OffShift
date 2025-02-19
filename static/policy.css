@@ -1,0 +1,126 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+body {
+font-family: 'Nunito', sans-serif;
+margin: 0;
+padding: 0;
+background-image: url('https://cdn.pixabay.com/photo/2022/03/17/23/46/pattern-7075582_1280.png');
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+
+.container {
+width: 80%;
+max-width: 800px;
+background: #ebd6cb;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+animation: fadeIn 0.8s ease-in-out;
+overflow-y: auto;
+max-height: 90vh;
+border-left: 8px solid #ff5e62;
+}
+
+
+h1 {
+text-align: center;
+font-size: 38px;
+font-weight: bolder;
+color: #fe0b0b;
+background: linear-gradient(to right, #ff9966, #ff5e62);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 20px;
+}
+
+h2 {
+font-size: 22px;
+font-weight: 700;
+color: #ff5e62;
+margin-top: 20px;
+border-left: 5px solid #ff9966;
+padding-left: 12px;
+}
+
+
+p, ul {
+font-size: 16px;
+font-weight: 400;
+color: #444;
+line-height: 1.8;
+}
+
+ul {
+padding-left: 20px;
+}
+
+ul li {
+background: url('https://cdn-icons-png.flaticon.com/16/709/709496.png') no-repeat left center;
+background-size: 18px;
+padding-left: 28px;
+margin-bottom: 10px;
+color: #555;
+}
+
+
+.confirm-section {
+margin-top: 25px;
+padding: 15px;
+background: #fff5f5;
+border-radius: 8px;
+text-align: center;
+border: 1px solid #ff5e62;
+}
+
+input[type="checkbox"] {
+transform: scale(1.3);
+margin-right: 10px;
+cursor: pointer;
+}
+
+
+button {
+padding: 12px 20px;
+font-size: 16px;
+font-weight: 600;
+background: #ff5e62;
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+margin-top: 15px;
+transition: 0.3s ease-in-out;
+box-shadow: 0px 4px 10px rgba(255, 94, 98, 0.3);
+}
+
+button:hover {
+background: #e04d55;
+transform: scale(1.05);
+}
+
+
+.container::-webkit-scrollbar {
+width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+background: #ff5e62;
+border-radius: 10px;
+}
+
+@keyframes fadeIn {
+from {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}

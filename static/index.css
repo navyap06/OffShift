@@ -1,0 +1,486 @@
+@keyframes q1 {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right,rgb(197, 228, 234),rgb(211, 231, 236),rgb(219, 241, 242))  
+}
+
+.container {
+    display: flex;
+}
+  
+header {
+    background: linear-gradient(to bottom right,rgb(88, 209, 233),rgb(234, 223, 229),rgb(12, 8, 10));
+    color: BLACK;
+    width: 500vw;
+    padding: 10px 20px; 
+    margin:0  ;
+    flex: 0  ; 
+    display: flex;
+    align-items: center;
+   
+}
+
+header #logo {
+    color:black;
+    font-size:30px; 
+    font-weight: bold;
+    margin-right:0;
+    padding:2px;
+   
+}
+header #logo1{
+    height:50px;
+    width:50px;
+    padding:2px;
+}
+
+nav{
+    background: linear-gradient(to bottom right,black,rgb(83, 83, 83),rgb(139, 138, 138));
+    color: white;
+    width: 200px; 
+    height: 350vh; 
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Padding for links */
+    display: block; /* Make the entire area clickable */
+}
+
+nav ul li a:hover {
+    background-color: #495057; /* Change background on hover */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    height:2000px;
+    
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+#image{
+    height:200px;
+    width:250px;
+}
+/* Dashboard Section */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-item {
+    background-color:rgb(155, 230, 233); /* Soft pinkish background */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    animation: q1 0.5s ease-in-out;
+    border: none; /* Adding a soft border */
+}
+
+.dashboard-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-item h3 {
+    font-size: 1.6em;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.dashboard-item p {
+    font-size: 1.2em;
+    color: #000000;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.dashboard-item strong {
+    color: #ff0088; /* Cute dark pink color for strong text */
+}
+
+.dashboard-item p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard-item a {
+    display: flex;
+
+    align-items: center;
+}
+
+/* Adding a slight gradient background effect for extra visual appeal */
+.dashboard-item {
+    background: linear-gradient(to bottom right,rgba(115, 208, 226, 0.632),rgba(231, 216, 224, 0.588),rgba(12, 8, 10, 0.282));
+
+}
+
+/* Animation on content text */
+.dashboard-item h3, .dashboard-item p {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.welcome {
+    /* background-image: url('https://cdn.pixabay.com/photo/2018/02/08/10/22/desk-3139127_1280.jpg'); */
+    background: linear-gradient(to bottom right,rgb(88, 209, 233),rgb(234, 223, 229),rgba(12, 8, 10, 0.417));
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    max-width: 900px;
+    margin: 70px auto;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.welcome h1 {
+    color:black; /* Cute pink color */
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color:black ;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.welcome p::before {
+    content: "🌸 ";
+    font-size: 1.5rem;
+}
+
+.welcome h1::after {
+    content: " 🌟";
+    font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.upcoming-events {
+    background: linear-gradient(to bottom right,rgb(88, 209, 233),rgb(234, 223, 229),rgba(12, 8, 10, 0.417));
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    margin: 20px auto;
+    max-width: 800px;
+    animation: slideIn 1.5s ease-out;
+}
+
+.upcoming-events h2 {
+    text-align: center;
+    color: #010101; /* Green color for freshness */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-item {
+    background:rgb(243, 235, 239) ;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-item h3 {
+    color: rgb(0, 0, 0); /* Tomato color for event titles */
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.event-item p {
+    color: #000000;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.recent-activities {
+    background: linear-gradient(to bottom right,rgb(88, 209, 233),rgb(234, 223, 229));
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recent-activities:hover {
+    transform: scale(1.02); /* Slight hover effect */
+}
+
+.recent-activities h2 {
+    color: #ff66a3; /* Cute pink header */
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.recent-activities ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activities li {
+    background: #fff;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    border-left: 5px solid #ff66a3;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activities li::before {
+    content: "✨"; /* Cute icon before each item */
+    margin-right: 10px;
+}
+
+
+
+
+.dashboard-item h3 {
+    margin-bottom: 10px;
+}
+
+.dashboard-item p {
+    font-size: 14px;
+}
+
+/* Employee Details Section */
+.employee-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.employee-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.employee-item h3 {
+    margin-bottom: 10px;
+}
+
+/* Quick Actions Section */
+.quick-actions a {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.quick-actions a:hover {
+    background-color: #0056b3;
+}
+
+/* Notifications Section */
+.notifications ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notifications li {
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Company Policies Section */
+.company-policies a {
+    color: #6de4ee;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.company-policies a:hover {
+    text-decoration: underline;
+}
+
+.company-policies ul {
+    padding-left: 20px;
+}
+
+.company-policies ul li {
+    margin-bottom: 5px;
+}
+
+/* Upcoming Events Section */
+.upcoming-events ul {
+    padding-left: 20px;
+}
+
+.upcoming-events ul li {
+    margin-bottom: 5px;
+}
+
+/* Team Collaboration Section */
+.team-collaboration ul {
+    padding-left: 20px;
+}
+
+.team-collaboration ul li {
+    margin-bottom: 5px;
+}
+/* Footer Styles */
+.footer {
+    background: linear-gradient(to bottom right,rgb(41, 44, 45),rgb(77, 74, 76),rgba(12, 8, 10, 0.417));
+
+    padding: 40px 0;
+    font-size: 14px;
+    color:white;
+}
+
+.footer .con3 {
+    width: 90%;
+    margin: auto;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: #e2acac;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #f0d4d4;
+}
+
+.footer-column ul li a:hover {
+    color: #2a9d8f;
+}
+
+.app-buttons img {
+    width: 120px;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.whatsapp {
+    display: inline-block;
+    text-decoration: none;
+    color: #25d366;
+    font-weight: bold;
+}
+#ffff{
+    font-size: 30px;
+    color :#97B3AE
+}

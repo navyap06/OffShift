@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://cdn.pixabay.com/photo/2017/03/01/22/09/background-2109754_1280.jpg') ;
+    /* background: linear-gradient(to bottom right,rgb(88, 209, 233),rgb(25, 44, 50),rgb(12, 8, 10)); */
+}
+
+.container {
+    display: flex;
+}
+  
+header {
+    background: linear-gradient(to bottom right,rgb(88, 209, 233),rgb(211, 72, 153),rgb(12, 8, 10));
+
+    color: BLACK;
+    padding: 10px 20px; 
+    margin:0  ;
+    flex: 0  ; 
+    display: flex;
+    align-items: center;
+   
+}
+
+header #logo {
+    color:black;
+    font-size:30px; 
+    font-weight: bold;
+    margin-right:0;
+    padding:2px;
+   
+}
+header #logo1{
+    height:50px;
+    width:50px;
+    padding:2px;
+}
+
+nav{
+    background: linear-gradient(to bottom right,black,rgb(83, 83, 83),rgb(139, 138, 138));
+    color: white;
+    width: 200px; 
+    height: 130vh; 
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Padding for links */
+    display: block; /* Make the entire area clickable */
+}
+
+nav ul li a:hover {
+    background-color: #495057; /* Change background on hover */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#head {
+    border: 2px solid;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+#main {
+    flex: 1;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #41817e;
+  
+    text-align: center;
+}
+
+th {
+    background-color: #bfd1c1;
+}
+
+form {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4caf7a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[name="action"][value="reject"] {
+    background-color: #a01818;
+}
+
+button[name="action"][value="delete"] {
+    background-color: #492fb1;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+a.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color:#F2C3B9;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-left:70px;
+}
+
+a.btn:hover {
+    background-color: #f30404;
+}
+#clear{
+  height: 50px;
+  width: 200px;
+  background-color: #534977;
+  border-radius: 10px;
+  margin-left: 400px;
+}
+#clear1{
+    height: 50px;
+    width: 200px;
+    background-color: #534977;
+    border-radius: 10px;
+    margin-left: 400px;
+  }

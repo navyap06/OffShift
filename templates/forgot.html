@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="../static/forgot.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forgot-password-form">
+            <h2>Forgot Your Password?</h2>
+           
+            <form id="Forgot form" action="{{ url_for('forgot_password') }}" method="POST">
+                <div class="form-group">
+                <label for="email">Email Address</label><br><br>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div><br>
+                <button type="submit" class="btn"><a href="">Submit</a></button>
+            </form>
+            <p class="back-to-login"><a href="{{url_for('login')}}">Back to Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
+

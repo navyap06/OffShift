@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ user.name }}'s Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+    <h2>{{ user.name }}'s Profile</h2>
+    <div class="profile-container">
+        <img src="https://media.istockphoto.com/id/1856248145/vector/2022-mes-dia-giu-ama-000-f-tema.jpg?s=1024x1024&w=is&k=20&c=4wt4DMK2TOvj0Qkp0aPt7ds7bMMijeOmppD7KDsSYO0=" alt="">
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Mobile Number:</strong> {{ user.mobile }}</p>
+    </div>
+    <a href="{{ url_for('index')}}">Back to Dashboard</a>
+</body>
+</html>

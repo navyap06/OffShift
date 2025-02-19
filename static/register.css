@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(135deg, #FFDEE9, #B5FFFC);  */
+    background-image: url('https://cdn.pixabay.com/photo/2017/11/06/08/44/things-2923050_1280.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+/* Flash Messages Styling */
+.alert {
+    padding: 12px 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Success Message */
+.alert-success {
+    background-color: #4CAF50;  /* Green */
+    border-left: 5px solid #2E7D32;
+}
+
+/* Error Message */
+.alert-danger {
+    background-color: #E74C3C;  /* Red */
+    border-left: 5px solid #C0392B;
+}
+
+/* Warning Message */
+.alert-warning {
+    background-color: #F39C12;  /* Orange */
+    border-left: 5px solid #E67E22;
+}
+
+/* Info Message */
+.alert-info {
+    background-color: #3498DB;  /* Blue */
+    border-left: 5px solid #2980B9;
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Auto-hide Flash Messages after 3 seconds */
+.alert {
+    animation: fadeOut 0.5s ease-in-out 3s forwards;
+}
+
+/* Close Button */
+.alert::after {
+    content: "✖";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.alert:hover::after {
+    color: black;
+}
+
+/* Remove message when clicked */
+.alert::after:hover {
+    transition: 0.2s;
+}
+
+.alert::after:active {
+    display: none;
+}
+
+
+h2 {
+    align-items: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fffafa;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 350px;
+    background: rgba(0, 0, 0, 0.396);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    border-color: #000000;
+    outline: none;
+    background: #fff;
+    box-shadow: 0px 0px 5px rgba(106, 90, 205, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #d70000;
+    transform: translateY(-2px);
+}

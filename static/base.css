@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+@keyframes q1 {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0; 
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex; 
+    margin-left: 0;
+}
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: q1 2s ease;
+}
+  
+header {
+    background-color: #F0DDD6;
+    color: rgb(244, 0, 0);
+    padding: 10px 20px; 
+    margin:0  ;
+    flex: 0  ; 
+    display: flex;
+    align-items: center;
+   
+}
+
+header #logo {
+    color:black;
+    font-size:30px; 
+    font-weight: bold;
+    margin-right:0;
+    padding:2px;
+   
+}
+header #logo1{
+    height:50px;
+    width:50px;
+    padding:2px;
+}
+
+nav{
+    background-color: #97B3AE ; 
+    color: rgb(0, 0, 0);
+    width: 200px; 
+    height: 150vh; 
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Padding for links */
+    display: block; /* Make the entire area clickable */
+}
+
+nav ul li a:hover {
+    background-color: #495057; /* Change background on hover */
+}

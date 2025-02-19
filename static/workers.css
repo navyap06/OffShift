@@ -1,0 +1,76 @@
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2023/06/13/16/37/ai-generated-8061342_1280.jpg');
+    font-family: 'Poppins', sans-serif; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+#head1{
+    color: #e51531;
+    margin-left: 100px;
+    margin-bottom: 500px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff0f6; /* Light pink background */
+    border: 1px solid #ffb6c1; /* Soft pink border */
+    border-radius: 20px;
+    width: 250px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.card h2 {
+    margin: 15px 0 10px;
+    font-size: 1.5rem;
+    color: #ff6f61; /* Soft coral color */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.card h3 {
+    margin: 5px 0;
+    color: #6b6b6b;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.card p {
+    font-size: 15px;
+    color: #777;
+    font-weight: 500;
+    line-height: 1.5;
+}

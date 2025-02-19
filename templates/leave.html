@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='leave.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <header>
+                <img id="logo1" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+                <div id="logo" class="shadows-into-light-regular">OffShift</div>
+            </header>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('leave') }}">Leave Requests</a></li>
+                <li><a href="{{ url_for('AboutUs') }}">AboutUs</a></li>
+                <li><a href="{{ url_for('policy') }}">Leave policies</a></li>
+                <li><a href="{{ url_for('profile')}}">Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+            <h2>Leave Requests</h2>
+          
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Leave Type</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for request in leave_requests %}
+                    <tr>
+                        <td>{{ request.employee_name }}</td>
+                        <td>{{ request.leave_type }}</td>
+                        <td>{{ request.start_date }}</td>
+                        <td>{{ request.end_date }}</td>
+                        <td>{{ request.status }}</td>
+                        <td>
+                            {% if request.status == 'Pending' %}
+                            <form action="{{ url_for('update_status', id=request.id) }}" method="POST">
+                                <button name="action" value="approve">Approve</button>
+                                <button name="action" value="reject">Reject</button>
+                                <button name="action" value="delete">Delete</button>
+                            </form>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br><br><br>
+            <!-- <a href="{{ url_for('apply_leave') }}" class="btn">Apply for Leave</a><br><br><br> -->
+            <form action="{{ url_for('clear') }}" method="POST">
+                <button id="clear" type="submit">Clear All</button>
+            </form>
+        </div>
+      
+    </div>
+</body>
+</html>

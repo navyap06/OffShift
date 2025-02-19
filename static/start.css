@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://cdn.pixabay.com/photo/2023/02/08/08/50/frequency-wave-7776034_1280.jpg');
+    /* background: linear-gradient(to right,#97B3AE  ,#D2E0D3   ,#F0DDD6  ,#F2C3B9,#D6CBBF  ); */
+    margin: 0;
+    padding: 0;
+}
+
+h1#head {
+    color: #ffffff;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 100px;
+}
+
+p#para {
+    color: #ff2b2b;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+a#link {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+a#link:hover {
+    background-color: #000000;
+    color:rgb(255, 245, 245);
+}
+
+
+
+.permanent-marker-regular {
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+    
+
+  
+  

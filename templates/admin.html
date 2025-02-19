@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <header>
+                <img id="logo1" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+                <div id="logo" class="shadows-into-light-regular">OffShift</div>
+            </header>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('leave') }}">Leave Requests</a></li>
+                <li><a href="{{ url_for('AboutUs') }}">AboutUs</a></li>
+                <li><a href="{{ url_for('policy') }}">Leave policies</a></li>
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+      
+        <div class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome">
+                <h1>Welcome, {{user.name }}</h1>
+                <p>We hope you're having a great day! Here is an overview of your current leave status and upcoming activities.</p>
+            </section>
+    
+            <!-- Dashboard Overview Section -->
+            <section class="dashboard">
+                <div class="dashboard-container">
+                    <!-- Leave Overview -->
+                    <div class="dashboard-item">
+                        <h3>Leave Overview</h3>
+                        <p>Total Leaves: <strong>20</strong></p>
+                        <p>Used Leave Days: <strong>13</strong></p>
+                        <p>Remaining Leave Days: <strong>7</strong></p>
+                    </div>
+                    
+                    <!-- Upcoming Leave -->
+                    <div class="dashboard-item">
+                        <h3>Upcoming Leave</h3>
+                        <img id="image" src="https://www.calendarlabs.com/wallpaper/monthly-wallpaper/03-2025/march-2025-wallpaper-calendar-cute-glitter-1600x900.jpg" alt="">
+                    </div>
+                    
+                    <!-- Leave Trends -->
+                    <div class="dashboard-item">
+                        <h3>Leave Trends</h3>
+                        <p>[Bar Chart/Line Graph Placeholder]</p>
+                        <p>Analyze your leave usage over the past months and get insights into your leave patterns.</p>
+                    </div>
+                    
+                    <!-- Team Availability -->
+                    <div class="dashboard-item">
+                        <h3>workers present Today</h3>
+                     <a href="/workers">workers Available</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Employee Details Section -->
+            <section class="upcoming-events">
+                <h2>Upcoming Events</h2>
+                <div class="events-container">
+                    <div class="event-item">
+                        <h3>Team Meeting</h3>
+                        <p><strong>Date:</strong> February 20, 2025</p>
+                        <p><strong>Time:</strong> 10:00 AM</p>
+                        <p><strong>Location:</strong> Conference Room B</p>
+                    </div>
+                    <div class="event-item">
+                        <h3>Project Deadline</h3>
+                        <p><strong>Date:</strong> February 25, 2025</p>
+                        <p><strong>Time:</strong> 5:00 PM</p>
+                        <p><strong>Details:</strong> Final report submission</p>
+                    </div>
+                    <div class="event-item">
+                        <h3>HR Training</h3>
+                        <p><strong>Date:</strong> February 27, 2025</p>
+                        <p><strong>Time:</strong> 1:00 PM</p>
+                        <p><strong>Location:</strong> HR Conference Room</p>
+                    </div>
+                </div>
+            </section>
+            
+    
+            <!-- Recent Activities Section -->
+            <section class="recent-activities">
+                <h2>Recent Activities</h2>
+                <ul>
+                    <li>Leave application submitted for 10th March - 15th March (Pending Approval)</li>
+                    <li>Leave balance updated: 5 days remaining</li>
+                    <li>Policy updates: New leave policies effective from 1st April</li>
+                </ul>
+          
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div id="ffff">
+                <h1>Off Shift</h1>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#">HR Software</a></li>
+                        <li><a href="#">Payroll Software</a></li>
+                        
+                        <li><a href="#">Attendance Management</a></li>
+                        <li><a href="#">Performance Management</a></li>
+                       
+                        <li><a href="#">Employee Engagement</a></li>
+                        
+                        <li><a href="#">Service Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HR & Payroll Administration</h3>
+                    <ul>
+                        <li><a href="#">What is HRMS?</a></li>
+                        
+                        <li><a href="#">Statutory Compliance</a></li>
+                        <li><a href="#">Guide to Leave Management</a></li>
+                        
+                        <li><a href="#">Holiday Lists 2025</a></li>
+                        <li><a href="#">Gender Inclusivity Report</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Guides</a></li>
+                        
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Podcasts</a></li>
+                        
+                        <li><a href="#">Community Forums</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customers</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                    <div class="app-buttons">
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="Google Play"></a>
+                        <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoBO0l8yIqBID5PzhQJKv30uZPtAwtiad7IQUa9g2ypxk7PbwA3Ne1SeWuQthni1Ty0A&usqp=CAU" alt="App Store"></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Customers</a></li>
+                        
+                        <li><a href="#">Pricing</a></li>
+                        
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Employee Leave Management System. All rights reserved.</p>
+                <p>📍 Grape Garden, #29 & 30, 17th Main, 6th Block, Koramangala, Bengaluru - 560095</p>
+                <a href="https://wa.me/yourwhatsappnumber" class="whatsapp">Message us on WhatsApp</a>
+            </div>
+        </div>
+</body>
+</html>

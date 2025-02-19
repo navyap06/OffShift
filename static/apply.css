@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right,rgb(88, 209, 233),rgb(25, 44, 50),rgb(12, 8, 10));
+
+    /* background-color: #f7f7f7; */
+    color: #333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the form */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(to bottom right,black,rgb(83, 83, 83),rgb(139, 138, 138));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Style */
+h1 {
+    text-align: center;
+    color: #7f8c8d; /* Soft grayish text */
+    margin-bottom: 20px;
+    animation-duration: 1s;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+}
+
+/* Labels */
+label {
+    font-size: 1rem;
+    color: #5e5e5e; /* Darker shade for the labels */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="date"],
+select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff; /* White background for input */
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #76d7c4; /* Pastel green focus effect */
+    outline: none;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: linear-gradient(to bottom right,rgb(88, 209, 233),rgb(66, 151, 177),rgb(12, 8, 10));
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation-duration: 1s;
+    animation-delay: 0.7s;
+}
+
+button[type="submit"]:hover {
+    background-color: #000000; /* Soft orange hover effect */
+}
+
+/* Back Button */
+a.btn {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #d5a6bd; /* Pastel purple */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #c27ba0; /* Slightly darker purple for hover */
+}
+
+/* Add animation for form elements */
+input, select, button {
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+}
